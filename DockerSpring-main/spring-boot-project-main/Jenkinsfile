@@ -3,13 +3,13 @@ pipeline{
 
     tools {
          maven 'maven'
-         jdk 'JDK_1.8'
+         jdk 'JDK_17'
     }
 
     stages{
         stage('checkout'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github access', url: 'https://github.com/raghu-1910/Devops_Spring.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github access', url: 'https://github.com/vishu-1999/DockerSpring.git']]])
             }
         }
         stage('build'){
